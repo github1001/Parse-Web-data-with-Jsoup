@@ -12,7 +12,7 @@ import java.util.List;
 
 public class JsoupData {
 	
-	private static final String DATA_FEED = "D:/ecommGovWebsite/Public holidays in Western Australia _ Department of Mines, Industry Regulation and Safety.html";
+	//private static final String DATA_FEED = "D:/ecommGovWebsite/Public holidays in Western Australia _ Department of Mines, Industry Regulation and Safety.html";
 
 	
 	public static void main(String[] args) throws IOException {
@@ -23,11 +23,14 @@ public class JsoupData {
 	public static List<String> getData() throws IOException{
 		List<String> list = new ArrayList<String>();
 		
-		File input = new File(DATA_FEED);
+		/*File input = new File(DATA_FEED);
 		Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
 		
-		System.out.println("doc is :"+doc);
+		System.out.println("doc is :"+doc);*/
 
+		Document doc = Jsoup.connect("https://www.commerce.wa.gov.au/labour-relations/public-holidays-western-australia").get();
+
+		
 		for (Element ths : doc.select("div.field table tr")) {
 
 			System.out.println(ths.text());
