@@ -10,7 +10,9 @@ import java.net.URL;
 
 public class Main {
 
-	private static final String DATA_FEED = "file:///D:/ecommGovWebsite/Public%20holidays%20in%20Western%20Australia%20_%20Department%20of%20Mines,%20Industry%20Regulation%20and%20Safety.html";
+	//private static final String DATA_FEED = "file:///D:/ecommGovWebsite/Public%20holidays%20in%20Western%20Australia%20_%20Department%20of%20Mines,%20Industry%20Regulation%20and%20Safety.html";
+
+	private static final String DATA_FEED = "https://www.commerce.wa.gov.au/labour-relations/public-holidays-western-australia";
 
 	public static void main(String[] args) throws IOException {
 		InputStream stream = null;
